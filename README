@@ -1,0 +1,5 @@
+README for Civicrm Payment Extension for Quickpay - Author Anders Iversen
+This is a payment extension for Civicrm 4.0, to use with Quickpay's payment gateway ( http://quickpay.net )
+It build upon the previous module for Civicrm 3.2 found here: http://quickpay.net/modules/civicrm
+
+(Instructions for installation pending...)
