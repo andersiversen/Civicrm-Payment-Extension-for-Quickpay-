@@ -274,9 +274,8 @@ class com_example_payment_quickpay_QuickpayIPN extends CRM_Core_Payment_BaseIPN 
         */
         /*
         // In the example at http://wiki.civicrm.org/confluence/display/CRMDOC40/Example+of+Creating+A+Payment+Processor+Extension
-        // they do this to redirect at the end, but for Quicpay already knows this from the returnURL/
-        // either way it doesn't work with or without this redirect - the user is not let on to the thank-you page and the payment is
-        // "pending" in CIVICRM (it is at captured at quickpay) 	
+        // they do this to redirect at the end, but Quickpay already knows this from the returnURL
+	//
         // Redirect our users to the correct url.
         if ($module == "event") {
           $finalURL = CRM_Utils_System::url('civicrm/event/register', 
