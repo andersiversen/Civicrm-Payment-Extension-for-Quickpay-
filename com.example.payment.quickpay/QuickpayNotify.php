@@ -20,7 +20,7 @@ require_once 'CRM/Core/Config.php';
 $config = CRM_Core_Config::singleton();
 
 require_once 'CRM/Core/Extensions/Extension.php';
-$ext = new CRM_Core_Extensions_Extension( 'dk.od.glados.payment.quickpay' );
+$ext = new CRM_Core_Extensions_Extension( 'com.example.payment.quickpay' );
 if ( !empty( $ext->path ) ) {
     // I think there's an error in civicrm 4.0's CRM/Core/Extensions/Extension.php line 72
     // $this->path = $config->extensionsDir . DIRECTORY_SEPARATOR . $key . DIRECTORY_SEPARATOR;
@@ -32,4 +32,4 @@ if ( !empty( $ext->path ) ) {
 
 require_once 'QuickpayIPN.php';
 $rawPostData = file_get_contents( 'php://input' );
-dk_od_glados_payment_QuickpayIPN::main( $rawPostData, $_POST);
+com_example_payment_QuickpayIPN::main( $rawPostData, $_POST);
