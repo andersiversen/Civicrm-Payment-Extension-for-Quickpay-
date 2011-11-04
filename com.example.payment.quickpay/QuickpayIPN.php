@@ -262,8 +262,6 @@ class com_example_payment_quickpay_QuickpayIPN extends CRM_Core_Payment_BaseIPN 
 	}
 	$status = quickpay_check_result($post_fields['qpstat']);
 
-	// I set this here, because I think this is 
-
         // this is from the Quickpay module for Civicrm 3.2
 	$ipn->orderStateChange($succes, $custom_fields, $module, $post_fields['transaction']);
         // but maybe I should do this instead:
